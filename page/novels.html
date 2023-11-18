@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaxve</title>
+    <link rel="stylesheet" type="text/css" href="../css/novels.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/logo.png" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img
+            src="../media/logo.png"
+            alt="logo"
+            style="cursor: pointer"
+            onclick="window.location.href='/'"
+          />
+        </div>
+        <div class="menu-icon">&#9776;</div>
+        <div class="nav-links">
+          <a href="/page/discography.html">Discography</a>
+          <a href="/page/projects.html">Projects</a>
+          <a href="/page/novels.html">Novels</a>
+        </div>
+      </nav>
+      <div class="content">
+        <h1>wip</h1>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.querySelector(".menu-icon");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuIcon.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+      });
+    });
+  </script>
+</html>

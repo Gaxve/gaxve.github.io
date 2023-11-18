@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: aliceblue;
+  background-color: rgb(10, 10, 10);
+}
+
+nav {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2; /* Place above the background video */
+  width: calc(100% - 60px);
+}
+nav img {
+  height: 76px; /* Adjust the height as needed */
+}
+
+nav div {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 32px; /* Adjust the font size as needed */
+  position: relative;
+  margin-left: 20px;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 32px;
+  color: white;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: row; /* Align items in a row for smaller screens */
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: 20px; /* Add margin between icon and links */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+    margin-left: 20px;
+  }
+
+  .nav-links a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: width 0.3s;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+    background-color: #ddd;
+  }
+
+  .menu-icon:hover + .nav-links {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 6em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  .social-icons i {
+    font-size: 2em;
+  }
+
+  .menu-icon:hover + .nav-links,
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links {
+    background-color: transparent;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+
+  .menu-icon:hover + .nav-links,
+  .nav-links.open {
+    height: auto;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-top: -20px;
+  }
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2; /* Place above the background video */
+}
+
+h1 {
+  font-size: 14em;
+  margin: 0;
+}
